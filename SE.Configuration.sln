@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE.Configuration", "SE.Configuration\SE.Configuration.csproj", "{301A8B4F-2C1F-4E43-B240-F0E228C85C5E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Configuration.Mixin", "SE.Configuration.Mixin\SE.Configuration.Mixin.shproj", "{8A3CDCC5-4B55-4D87-A415-698A0E1FF06F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,5 +23,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F2210DF-2B4F-42C9-B745-255C8878C0FF}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{301a8b4f-2c1f-4e43-b240-f0e228c85c5e}*SharedItemsImports = 5
+		SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{8a3cdcc5-4b55-4d87-a415-698a0e1ff06f}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

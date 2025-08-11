@@ -23,4 +23,5 @@
     <AdditionalFiles Include="Instructions.readme" />
     <AdditionalFiles Include="thumb.png" />
   </ItemGroup>
+  <Import Project="..\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems" Label="Shared" />
 </Project>
