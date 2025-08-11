@@ -9,7 +9,6 @@ namespace IngameScript
         }
         public void DoWork()
         {
-            // ... логика работы ...
         }
     }
 }
