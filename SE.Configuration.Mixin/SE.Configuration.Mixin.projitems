@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IConfigStorage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IConfigurationManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Storage\ProgrammableBlockStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ConfigurationExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DrillingRigConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PowerManagementConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ConfigurationManager.cs" />
