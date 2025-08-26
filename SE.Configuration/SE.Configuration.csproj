@@ -24,6 +24,6 @@
     <AdditionalFiles Include="thumb.png" />
   </ItemGroup>
   <Import Project="..\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems" Label="Shared" />
+  <Import Project="..\SE.SEApplication.ConfigurationExtension.Mixin\SE.SEApplication.ConfigurationExtension.Mixin.projitems" Label="Shared" />
   <Import Project="..\..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems" Label="Shared" />
-  <Import Project="..\..\SE.Command\SE.Command.Mixin\SE.Command.Mixin.projitems" Label="Shared" />
 </Project>

@@ -9,11 +9,6 @@
     <Import_RootNamespace>IngameScript</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Exceptions\ConfigurationException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IConfigSection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IConfigStorage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\IConfigurationManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Storage\ProgrammableBlockStorage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ConfigurationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigurationExtension.cs" />
   </ItemGroup>
 </Project>

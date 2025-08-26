@@ -9,7 +9,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Configuration.Mixin", "S
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.SEApplication.Mixin", "..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.shproj", "{60062648-C770-427E-8C66-95F0D8761E57}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Command.Mixin", "..\SE.Command\SE.Command.Mixin\SE.Command.Mixin.shproj", "{FF966C61-D39A-4C2E-BF06-3E7C263E1472}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.SEApplication.ConfigurationExtension.Mixin", "SE.SEApplication.ConfigurationExtension.Mixin\SE.SEApplication.ConfigurationExtension.Mixin.shproj", "{E2FC9D06-E35C-4A34-AC94-1FFC64991D5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,11 +29,11 @@ Global
 		SolutionGuid = {3F2210DF-2B4F-42C9-B745-255C8878C0FF}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\SE.Command\SE.Command.Mixin\SE.Command.Mixin.projitems*{301a8b4f-2c1f-4e43-b240-f0e228c85c5e}*SharedItemsImports = 5
 		SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{301a8b4f-2c1f-4e43-b240-f0e228c85c5e}*SharedItemsImports = 5
+		SE.SEApplication.ConfigurationExtension.Mixin\SE.SEApplication.ConfigurationExtension.Mixin.projitems*{301a8b4f-2c1f-4e43-b240-f0e228c85c5e}*SharedItemsImports = 5
 		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{301a8b4f-2c1f-4e43-b240-f0e228c85c5e}*SharedItemsImports = 5
 		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{60062648-c770-427e-8c66-95f0d8761e57}*SharedItemsImports = 13
 		SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{8a3cdcc5-4b55-4d87-a415-698a0e1ff06f}*SharedItemsImports = 13
-		..\SE.Command\SE.Command.Mixin\SE.Command.Mixin.projitems*{ff966c61-d39a-4c2e-bf06-3e7c263e1472}*SharedItemsImports = 13
+		SE.SEApplication.ConfigurationExtension.Mixin\SE.SEApplication.ConfigurationExtension.Mixin.projitems*{e2fc9d06-e35c-4a34-ac94-1ffc64991d5b}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
