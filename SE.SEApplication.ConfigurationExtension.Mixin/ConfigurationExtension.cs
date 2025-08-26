@@ -30,7 +30,7 @@ namespace IngameScript
                 catch (Exception ex)
                 {
                     program.Echo($"Critical error during config load: {ex.Message}." +
-                                 $"\n Current config: `{storage.Load()}`");                   
+                                 $"\nCurrent config: `{storage.Load()}`");                   
                     throw;
                 }
 
