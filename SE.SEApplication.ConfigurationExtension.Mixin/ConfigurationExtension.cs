@@ -6,7 +6,7 @@ namespace IngameScript
 {
     public static class ConfigurationExtension
     {
-        public static SEApplicationBuilder AddConfiguration(this SEApplicationBuilder builder, IEnumerable<IConfigSection> configs)
+        public static SEApplicationBuilder AddConfiguration(this SEApplicationBuilder builder, IEnumerable<IConfigSection> configs = null)
         {
             builder.Services.AddSingleton<IConfigurationManager, ConfigurationManager>(p => 
             {                 
