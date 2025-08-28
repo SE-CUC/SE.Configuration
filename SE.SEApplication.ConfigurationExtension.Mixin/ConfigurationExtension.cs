@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace IngameScript
@@ -8,36 +9,43 @@ namespace IngameScript
     {
         public static SEApplicationBuilder AddConfiguration(this SEApplicationBuilder builder, IEnumerable<IConfigSection> configs = null)
         {
-            builder.Services.AddSingleton<IConfigurationManager, ConfigurationManager>(p => 
-            {                 
-                var program = p.GetService<Program>();
-                IConfigStorage storage = new ProgrammableBlockStorage(program.Me);
-                var configManager = new ConfigurationManager(storage);
-                foreach (var config in configs)
+            builder.Services.AddSingleton<IConfigurationManager, ConfigurationManager>(p =>
+            {
+            var program = p.GetService<Program>();
+            IConfigStorage storage = new ProgrammableBlockStorage(program.Me);
+            var configManager = new ConfigurationManager(storage);
+                if (configs != null)
                 {
-                    configManager.Register(config);
-                }
-                try
-                {
-                    if(storage.Load() == string.Empty)
+                    foreach (var config in configs)
                     {
-                        program.Echo("No configuration found, saving defaults to Custom Data.");
-                        configManager.SaveDefaults();
+                        configManager.Register(config);
                     }
+                    try
+                    {
+                        if (storage.Load() == string.Empty)
+                        {
+                            program.Echo("No configuration found, saving defaults to Custom Data.");
+                            configManager.SaveDefaults();
+                        }
 
-                    configManager.Load();
+                        configManager.Load();
+                    }
+                    catch (Exception ex)
+                    {
+                        program.Echo($"Critical error during config load: {ex.Message}." +
+                                     $"\nCurrent config: `{storage.Load()}`");
+                        throw;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    program.Echo($"Critical error during config load: {ex.Message}." +
-                                 $"\nCurrent config: `{storage.Load()}`");                   
-                    throw;
-                }
-
                 return configManager;
-            });
+            }); 
 
             return builder;
+        }
+
+        public static SEApplicationBuilder AddConfiguration(this SEApplicationBuilder builder, params IConfigSection[] configs)
+        {
+            return AddConfiguration(builder, configs.AsEnumerable());
         }
 
         public static SEApplicationBuilder AddConfiguration(this SEApplicationBuilder builder, Func<SEApplicationBuilder, SEApplicationBuilder> func)
